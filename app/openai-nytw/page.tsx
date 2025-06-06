@@ -324,7 +324,8 @@ export default function OpenAIPage() {
                         onChange={(e) => setQuery(e.target.value)}
                         className="flex-1"
                     />
-                    <Button type="submit" disabled={isLoading || !query.trim()} icon={isLoading ? <Spinner className="mr-2 h-4 w-4" /> : <Globe className="mr-2 h-4 w-4" />}>
+                    <Button type="submit" disabled={isLoading || !query.trim()}>
+                        {isLoading ? <Spinner className="mr-2 h-4 w-4" /> : <Globe className="mr-2 h-4 w-4" />}
                         Submit
                     </Button>
                 </div>

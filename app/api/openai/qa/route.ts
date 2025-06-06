@@ -35,11 +35,12 @@ const sessions = new Map<string, QASession>();
 // Cleanup old sessions (older than 1 hour)
 const cleanupSessions = () => {
     const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000);
-    for (const [sessionId, session] of sessions.entries()) {
+    // Use Array.from to convert Map entries to an array that can be iterated safely
+    Array.from(sessions).forEach(([sessionId, session]) => {
         if (session.createdAt < oneHourAgo) {
             sessions.delete(sessionId);
         }
-    }
+    });
 };
 
 // Create the "questionGenerator" agent
