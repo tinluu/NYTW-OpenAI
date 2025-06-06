@@ -57,7 +57,7 @@ export default function Home() {
         <CardHeader>
           <CardTitle>Try Question Generation</CardTitle>
           <CardDescription>
-            Enter your content below and we'll help you generate relevant questions.
+            Enter your content below and we&apos;ll help you generate relevant questions.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
